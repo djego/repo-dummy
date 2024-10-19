@@ -9,3 +9,10 @@ function generateRandomNumberBetween(min, max) {
 function generateHash() {
   return Math.random().toString(36).substring(2);
 }
+
+function generateSha256Hash() {
+  return crypto
+    .createHash("sha256")
+    .update(Math.random().toString())
+    .digest("hex");
+}
